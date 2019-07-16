@@ -426,7 +426,7 @@ EOF
 }
 
 ?>
-		<div Class="box_Zonnepanelen" id="box_Zonnepanelen">
+		<div Class="box_Zonnepanelen" id="box_Zonnepanelen" onmouseleave="paneelChartcl()">
 <?php
 	for ($i=1; $i<=$aantal; $i++){
 		echo '				<div class="box_Zonnepaneel_'.$i.'" id="box_Zonnepaneel_'.$i.'">'."\n";
@@ -500,10 +500,6 @@ EOF
 			},
 			hide: { delay: 100 }
 		}, event); // Pass through our original event to qTip
-	})
-
-	$(document).on('mouseout', '', function(event) {
-		paneelChartcl();
 	})
 
 	$(document).on('mouseover', 'area', function(event) {
@@ -854,18 +850,16 @@ EOF
 
 	function paneelChartcl() {
 		inverter_redraw = 1;
-		setTimeout(function () {
-			if (inverter_redraw == 1) {
-				document.getElementById("box_panel_vermogen").style.display = "none"
-				document.getElementById("box_panel_energy").style.display = "none"
-				inverter_charte.redraw();
-				inverter_chartv.redraw();
-				document.getElementById("box_chart_vermogen").style.display = "block"
-				document.getElementById("box_chart_energy").style.display = "block"
-				inverter_charte.reflow();
-				inverter_chartv.reflow();
-			}
-		}, 200);
+		if (inverter_redraw == 1) {
+			document.getElementById("box_panel_vermogen").style.display = "none"
+			document.getElementById("box_panel_energy").style.display = "none"
+			inverter_charte.redraw();
+			inverter_chartv.redraw();
+			document.getElementById("box_chart_vermogen").style.display = "block"
+			document.getElementById("box_chart_energy").style.display = "block"
+			inverter_charte.reflow();
+			inverter_chartv.reflow();
+		}
 	}
 
 	function waarde(l,d,x){
