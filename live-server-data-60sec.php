@@ -109,7 +109,7 @@ for ($i = 1; $i <= $aantal; $i++) {
 }
 
 # haal gegevens van de panelen op
-$query = sprintf("SELECT HEX(op_id) optimizer, timestamp, uptime, v_in*i_in*0.125*0.00625 as vermogen, e_day*0.25 as energie, temperature
+$query = sprintf("SELECT HEX(op_id) optimizer, timestamp, uptime, v_in*i_in*0.125*0.00625 as vermogen, e_day*0.25 as energie, temperature, v_in, i_in, v_out
 		FROM telemetry_optimizers
 		WHERE timestamp > %s AND timestamp <= %s
 		ORDER BY timestamp;",
@@ -125,6 +125,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 			$diff['op_id']  = $i;
 			$diff['ts'] = $row['timestamp'] * 1000;
 			$diff['t'] = $row['temperature']*2;
+			$diff['vin'] = sprintf("%.3f", $row['v_in']*.125);
+			$diff['iin'] = sprintf("%.3f", $row['i_in']*.00625);
+			$diff['vout'] = sprintf("%.3f", $row['v_out']*.125);
 			$diff['cp'] = sprintf("%.3f", $row['vermogen']);
 
 			if ($paneel[$i]['uptime'] > $row['uptime']) {

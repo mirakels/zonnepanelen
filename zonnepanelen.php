@@ -835,10 +835,20 @@ EOF
 			document.getElementById("box_chart_vermogen").style.display = "none";
 			document.getElementById("box_chart_energy").style.display = "none";
 			// #### Vermogen #####
-			paneelFillSeries('Energie', id, paneel_charte);
 			if (event.shiftKey) {
+				paneelFillSeries('Energie', id, paneel_charte, );
 				paneelFillSeries('Temperatuur', id, paneel_chartv);
-			} else {
+			}
+			else if (event.ctrlKey) {
+				paneelFillSeries('V_in', id, paneel_charte);
+				paneelFillSeries('I_in', id, paneel_chartv);
+			}
+			else if (event.altKey) {
+				paneelFillSeries('Energie', id, paneel_charte);
+				paneelFillSeries('V_out', id, paneel_chartv);
+			}
+			else {
+				paneelFillSeries('Energie', id, paneel_charte);
 				paneelFillSeries('Vermogen', id, paneel_chartv);
 			}
 			document.getElementById("box_panel_vermogen").style.display = "block";
