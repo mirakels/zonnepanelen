@@ -1383,13 +1383,13 @@ EOF
 									"<tr><td>Afstand:</td><td>" + data[iy]["sde"] + "</td><td style=\"text-align:left\">km</td></tr>" +
 									"<tr><td>Diameter:</td><td>" + data[iy]["sdr"] + "</td><td style=\"text-align:left\"></td></tr>" +
 									"<tr><td>Morgen:</td><td></td><td></td></tr>" +
-									"<tr><td>Nautical:</td><td>" + nauticalrise + " - " + sunrise + "</td><td></td></tr>" +
+									"<tr><td>Nautical:</td><td>" + nauticalrise + " - " + bleurise + "</td><td></td></tr>" +
 									"<tr><td>(Civil) Blauwe uur:</td><td>" + bleurise + " - " + sunrise + "</td><td></td></tr>" +
 									"<tr><td>Gouden uur:</td><td>" + sunrise + " - " + goldenrise + "</td><td></td></tr>" +
 									"<tr><td>Avond:</td><td></td><td></td></tr>" +
 									"<tr><td>Gouden uur:</td><td>" + goldenset + " - " + sunset + "</td><td></td></tr>" +
 									"<tr><td>(Civil) Blauwe uur:</td><td>" + sunset + " - " + bleuset + "</td><td></td></tr>" +
-									"<tr><td>Nautical:</td><td>" + sunset + " - " + nauticalset + "</td><td></td></tr>" +
+									"<tr><td>Nautical:</td><td>" + bleuset + " - " + nauticalset + "</td><td></td></tr>" +
 									"<tr><td>Mar equinox:</td><td>" + maart + "</td><td></td></tr>" +
 									"<tr><td>Jun zonnewende</td><td>" + juni + "</td><td></td></tr>" +
 									"<tr><td>Sep equinox:</td><td>" + september + "</td><td></td></tr>" +
