@@ -605,6 +605,7 @@ EOF
 	var con_start_year = con_start_date.getFullYear();
 	var con_days = daysInMonth(con_month, con_start_year);
 	var period_60sec = "s";
+	var panelclicked = 0;
 
 	google.charts.load('current', {'packages':['gauge', 'line']});
 	google.charts.setOnLoadCallback(drawChart);
@@ -857,8 +858,8 @@ EOF
 	}
 
 	function paneelChartcl() {
-		inverter_redraw = 1;
-		if (inverter_redraw == 1) {
+		if (panelclicked == 0) {
+			inverter_redraw = 1;
 			document.getElementById("box_panel_vermogen").style.display = "none"
 			document.getElementById("box_panel_energy").style.display = "none"
 			inverter_charte.redraw();
@@ -2248,7 +2249,10 @@ EOF
 	});
 
 	document.getElementById("box_Zonnepanelen").addEventListener("click", function() {
-		this.classList.toggle("box_Zonnepanelen-is-clicked");
+		if (event.shiftKey)
+			panelclicked ^= 1;
+		else
+			this.classList.toggle("box_Zonnepanelen-is-clicked");
 	});
 	document.getElementById("box_sunrise").addEventListener("click", function() {
 		this.classList.toggle("box_sunrise-is-clicked");
