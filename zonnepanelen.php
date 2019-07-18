@@ -818,14 +818,12 @@ EOF
 				ichart.series[aantal].addPoint([data_p[i]['ts'], data_p[i][paneelGraph[metric]['metric']]*1], false, shift);
 			}
 		}
-		ichart.setTitle(null, { text: 'Paneel: ' + op_id[id] + ' en alle andere panelen', x: 20});
-		ichart.legend.update({x: 10, y: 20});
+		ichart.setTitle(null, { text: 'Paneel: ' + op_id[id] + ' en alle andere panelen'});
 		ichart.series[aantal].update({name: paneelGraph[metric]['tekst'] + " paneel: " + op_id[id], style: {font: 'Arial', fontWeight: 'bold', fontSize: '12px' }});
 		ichart.series[aantal-1].update({showInLegend: false});
 		ichart.series[aantal-2].update({showInLegend: true, name: paneelGraph[metric]['tekst'] + " overige panelen"});
 		ichart.yAxis[0].update({ opposite: true });
 		ichart.yAxis[0].update({ title: { text: paneelGraph[metric]['tekst'] + ' (' + paneelGraph[metric]['unit'] + ')' }, });
-		ichart.yAxis[1].update({ labels: { enabled: false }, title: { text: null } });
 		ichart.redraw();
 	}
 
