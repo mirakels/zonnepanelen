@@ -1195,18 +1195,18 @@ EOF
 				}
 				document.getElementById("sum_text").innerHTML = "<table width=100% class=data-table>"+
 						"<tr><td colspan=5><b>&nbsp;&nbsp;&nbsp;Totaal overzicht "+reportDayDMY+"</b></td></tr>" +
-						"<tr><td colspan=2></td><td><u>Dag</u></td><td><u>MTD</u></td><td><u>"+contract_datum+"</u></td></tr>" +
-						"<tr><td colspan=2><u>Solar prod:</u></td><td>"+waarde(0,0,SolarProdToday)+"</td><td>"+waarde(0,0,mse + msv)+"</td><td>"+waarde(0,0,yse + ysv + se + sv)+"</td></tr>"+
-						(PVGis[reportMaand] == 0 ? '' : '<tr><td colspan=2>'+PVGtxt+':</td><td>'+waarde(0,0,PVGisd)+'</td><td>'+waarde(0,0,PVGism)+ '</td><td>'+PVGisj+'</td></tr>') +
-						"<tr><td colspan=2>Efficiëntie:</td><td>"+waarde(0,1,(SolarProdToday*1000/tverm))+"</td><td>"+waarde(0,0,((mse + msv)*1000/tverm))+"</td><td>"+waarde(0,0,((yse + ysv + se + sv)*1000/tverm))+"</td></tr>"+
+						"<tr><td colspan=2></td><td align='right'><u>Dag</u></td align='right'><td align='right'><u>MTD</u></td><td align='right'><u>"+contract_datum+"</u></td></tr>" +
+						"<tr><td colspan=2><u>Solar prod:</u></td><td align='right'>"+waarde(0,0,SolarProdToday)+"</td><td align='right'>"+waarde(0,0,mse + msv)+"</td><td align='right'>"+waarde(0,0,yse + ysv + se + sv)+"</td></tr>"+
+						(PVGis[reportMaand] == 0 ? "" : "<tr><td colspan=2>"+PVGtxt+":</td><td align='right'>"+waarde(0,0,PVGisd)+"</td><td align='right'>"+waarde(0,0,PVGism)+ "</td><td align='right'>"+PVGisj+"</td></tr>") +
+						"<tr><td colspan=2>Efficiëntie:</td><td align='right'>"+waarde(0,1,(SolarProdToday*1000/tverm))+"</td><td align='right'>"+waarde(0,0,((mse + msv)*1000/tverm))+"</td><td align='right'>"+waarde(0,0,((yse + ysv + se + sv)*1000/tverm))+"</td></tr>"+
 						"<tr><td colspan=5><br><u>Huis verbruik</u></td></tr>" +
-						"<tr><td colspan=2>solar:</td><td>"+waarde(0,0,sv)+"</td><td>"+waarde(0,0,msv)+"</td><td>"+waarde(0,0,ysv + sv)+"</td></tr>"+
-						"<tr><td colspan=2>net:</td><td>"+waarde(0,0,ve)+"</td><td>"+waarde(0,0,mve)+"</td><td>"+waarde(0,0,yve + ve)+"</td></tr>"+
-						"<tr><td colspan=2><b>Totaal:</b></td><td><b>"+waarde(0,0,ve+sv)+"</b></td><td><b>"+waarde(0,0,mve+msv)+"</b></td><td><b>"+waarde(0,0,yve + ysv + ve +sv)+"</b></td></tr>"+
+						"<tr><td colspan=2>solar:</td><td align='right'>"+waarde(0,0,sv)+"</td><td align='right'>"+waarde(0,0,msv)+"</td><td align='right'>"+waarde(0,0,ysv + sv)+"</td></tr>"+
+						"<tr><td colspan=2>net:</td><td align='right'>"+waarde(0,0,ve)+"</td><td align='right'>"+waarde(0,0,mve)+"</td><td align='right'>"+waarde(0,0,yve + ve)+"</td></tr>"+
+						"<tr><td colspan=2><b>Totaal:</b></td><td align='right'><b>"+waarde(0,0,ve+sv)+"</b></td><td align='right'><b>"+waarde(0,0,mve+msv)+"</b></td><td align='right'><b>"+waarde(0,0,yve + ysv + ve +sv)+"</b></td></tr>"+
 						"<tr><td colspan=5><br><u><?php echo $ElecLeverancier?></u></td></tr>" +
-						"<tr><td colspan=2>verbruik:</td><td>"+waarde(0,0,ve)+"</td><td>"+waarde(0,0,mve)+"</td><td>"+waarde(0,0,yve + ve)+"</td></tr>"+
-						"<tr><td colspan=2>retour:</td><td>"+waarde(0,0,se)+"</td><td>"+waarde(0,0,mse)+"</td><td>"+waarde(0,0,yse + se)+"</td></tr>"+
-						"<tr><td colspan=2><b>Netto:</b></td><td class="+dcdiff+"><b>"+waarde(0,0,ddiff)+"</b></td><td class="+mcdiff+"><b>"+waarde(0,0,mdiff)+"</b></td><td class="+ycdiff+"><b>"+waarde(0,0,ydiff)+"</b></td></tr>"+
+						"<tr><td colspan=2>verbruik:</td><td align='right'>"+waarde(0,0,ve)+"</td><td align='right'>"+waarde(0,0,mve)+"</td><td align='right'>"+waarde(0,0,yve + ve)+"</td></tr>"+
+						"<tr><td colspan=2>retour:</td><td align='right'>"+waarde(0,0,se)+"</td><td align='right'>"+waarde(0,0,mse)+"</td><td align='right'>"+waarde(0,0,yse + se)+"</td></tr>"+
+						"<tr><td colspan=2><b>Netto:</b></td><td class="+dcdiff+" align='right'><b>"+waarde(0,0,ddiff)+"</b></td><td class="+mcdiff+" align='right'><b>"+waarde(0,0,mdiff)+"</b></td><td class="+ycdiff+" align='right'><b>"+waarde(0,0,ydiff)+"</b></td></tr>"+
 						"</table>";
 			}
 		}
