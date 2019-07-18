@@ -1256,13 +1256,13 @@ EOF
 									document.getElementById("so_text").innerHTML = data[iy]["IVACT"]+ " Watt";
 									document.getElementById("sola_text").innerHTML =
 											"<table width=100% class=data-table>" +
-											"<tr><td><b><u>Solar vandaag</u></b></td><td style=\"font-size:smaller\">" + data[iy]["IT"].substr(11,10) + "</td></tr>" +
+											"<tr><td><b><u>Solar vandaag</u></b></td><td>" + data[iy]["IT"].substr(11,10) + "</td></tr>" +
 											((P1 == 1) ? (
-												"<tr><td>verbruik:</td><td>" + waarde(0,3,parseFloat(data[iy]["IE"])-parseFloat(s_p1CounterDelivToday)) + " kWh</td></tr>" +
-												"<tr><td>retour:</td><td><u>" + waarde(0,3,parseFloat(s_p1CounterDelivToday)) + " kWh</u></td></tr>"
+												"<tr><td>verbruik:</td><td align='right'>" + waarde(0,3,parseFloat(data[iy]["IE"])-parseFloat(s_p1CounterDelivToday)) + " kWh</td></tr>" +
+												"<tr><td>retour:</td><td align='right' style='border-bottom:solid 2px'>" + waarde(0,3,parseFloat(s_p1CounterDelivToday)) + " kWh</td></tr>"
 												) : "" ) +
-											"<tr><td class=green_text>productie:</td><td class=green_text>" + waarde(0,3,data[iy]["IE"]) + " kWh</td></tr>" +
-											"<tr><td>efficiëntie:</td><td>" + waarde(0,2,(SolarProdToday*1000/tverm)) + " Wh/Wp</td></tr></table>";
+											"<tr><td class=green_text>productie:</td><td align='right' class=green_text>" + waarde(0,3,data[iy]["IE"]) + " kWh</td></tr>" +
+											"<tr><td>efficiëntie:</td><td align='right'>" + waarde(0,2,(SolarProdToday*1000/tverm)) + " Wh/Wp</td></tr></table>";
 									document.getElementById("inverter_text").innerHTML =
 											"<table width=100% class=data-table>"+
 											"<tr><td>Date:</td><td colspan=3>"+data[iy]["IT"]+"</td></tr>" +
