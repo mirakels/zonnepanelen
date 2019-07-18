@@ -274,8 +274,8 @@ omschrijving: hoofdprogramma
 					plotBands: [\n";
 			for ($i = 0; $i < 25; $i += 2) { print "			{
 					color: '#ebfbff',
-					from: Date.UTC(reportJaar, reportMaand-1 , reportDag, " . $i . "-reportWinterOffset),
-					to: Date.UTC(reportJaar, reportMaand-1, reportDag, " . ($i+1) . "-reportWinterOffset),
+					from: Date.UTC(reportJaar, reportMaand-1, reportDag, " . $i     . "-reportWinterOffset),
+					to:   Date.UTC(reportJaar, reportMaand-1, reportDag, " . ($i+1) . "-reportWinterOffset)
 				},\n";
 			}
 			print "],\n";
@@ -860,12 +860,12 @@ EOF
 	function paneelChartcl() {
 		if (panelclicked == 0) {
 			inverter_redraw = 1;
-			document.getElementById("box_panel_vermogen").style.display = "none"
-			document.getElementById("box_panel_energy").style.display = "none"
+			document.getElementById("box_panel_vermogen").style.display = "none";
+			document.getElementById("box_panel_energy").style.display = "none";
 			inverter_charte.redraw();
 			inverter_chartv.redraw();
-			document.getElementById("box_chart_vermogen").style.display = "block"
-			document.getElementById("box_chart_energy").style.display = "block"
+			document.getElementById("box_chart_vermogen").style.display = "block";
+			document.getElementById("box_chart_energy").style.display = "block";
 			inverter_charte.reflow();
 			inverter_chartv.reflow();
 		}
@@ -1411,7 +1411,7 @@ EOF
 									"<tr><td>Volg. volle maan:</td><td>" + data[iy]["nfm"] + "</td><td style=\"text-align:left\"></td></tr>" +
 									"<tr><td>Volg. laaste kwartier:</td><td>" + data[iy]["nlq"] + "</td><td style=\"text-align:left\"></td></tr>" +
 									"</table>");
-							break
+							break;
 					}
 				}
 				UpdateDataInverter();
@@ -2074,7 +2074,7 @@ EOF
 					},
 					floating: true
 				},
-				xAxis: [{ <?php genxAxis(); ?> }],
+				xAxis: { <?php genxAxis(); ?> },
 				yAxis: [{
 					title: { text: 'Vermogen (W)' },
 					tickPositioner: function () {
