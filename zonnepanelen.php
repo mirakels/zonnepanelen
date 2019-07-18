@@ -1596,7 +1596,7 @@ EOF
 			},
 			exporting: {
 				enabled: false,
-				filename: 'power_chart',
+				filename: 'panel_chartv',
 				url: 'export.php'
 			},
 			<?php panelenSeries($aantal, $kleur2, $kleurg); ?>
@@ -1724,7 +1724,7 @@ EOF
 			},
 			exporting: {
 				enabled: false,
-				filename: 'power_chart',
+				filename: 'panel_charte',
 				url: 'export.php'
 			},
 			<?php panelenSeries($aantal, $kleur2, $kleurg); ?>
@@ -1870,7 +1870,7 @@ EOF
 			},
 			exporting: {
 				enabled: false,
-				filename: 'power_chart',
+				filename: 'inverter_charte',
 				url: 'export.php'
 			},
 			<?php productieSeries($ingr, $kleur, $kleur1, $kleurg, $InvDays) ?>
@@ -2037,6 +2037,11 @@ EOF
 					}
 				},
 				buttons: { contextButton: { menuItems: ['btn1', 'btn2'] } }
+			},
+			exporting: {
+				enabled: false,
+				filename: 'inverter_chartv',
+				url: 'export.php'
 			},
 			<?php productieSeries($ingr, $kleur, $kleur1, $kleurg, $InvDays) ?>
 		});
@@ -2513,7 +2518,7 @@ EOF
 			},
 			exporting: {
 				enabled: false,
-				filename: 'power_chart',
+				filename: 'P1_meter_chart',
 				url: 'export.php'
 			},
 			legend: {
