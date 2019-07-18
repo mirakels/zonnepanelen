@@ -536,8 +536,8 @@ EOF
 	var lon = '<?php echo $long ?>';
 	var moondate = new Date(reportDateYMD);
 	var zone = Math.round(moondate.getTimezoneOffset() / 60);
-	var maanrise = moonRiseSet(lat, lon, moondate, zone, "r");
-	var maanset = moonRiseSet(lat, lon, moondate, zone, "s");
+	var maanrise = moonRiseSet(lat, lon, moondate, zone, "r", 0);
+	var maanset = moonRiseSet(lat, lon, moondate, zone, "s", 0);
 	var begin = '<?php echo $begin?>';
 	var vermogen = '<?php echo $vermogen?>';
 	var inverter = '<?php echo $inverter?>';
