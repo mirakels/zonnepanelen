@@ -934,10 +934,10 @@ EOF
 							diff = -diff;
 						}
 						document.getElementById("elec_text").innerHTML = "<table width=100% class=data-table>" +
-								"<tr><td><u><b><?php echo $ElecLeverancier?> vandaag</u></b></td><td style=\"font-size:smaller\">" + p1servertime + "</td></tr>" +
-								"<tr><td>verbruik:</td><td>" + waarde(0,3,parseFloat(p1CounterToday)) + " kWh</td></tr>" +
-								"<tr><td>retour:</td><td><u>" + waarde(0,3,parseFloat(p1CounterDelivToday)) + " kWh</u></td></tr>" +
-								"<tr><td class=" + cdiff + ">netto:</td><td class=" + cdiff + " >" + waarde(0,3,diff) + " kWh</td></tr>" +
+								"<tr><td><u><b><?php echo $ElecLeverancier?> vandaag</u></b></td><td>" + p1servertime + "</td></tr>" +
+								"<tr><td>verbruik:</td><td align='right'>" + waarde(0,3,parseFloat(p1CounterToday)) + " kWh</td></tr>" +
+								"<tr><td>retour:</td><td align='right' style='border-bottom:solid 2px'>" + waarde(0,3,parseFloat(p1CounterDelivToday)) + " kWh</td></tr>" +
+								"<tr><td class=" + cdiff + ">netto:</td><td align='right' class=" + cdiff + " >" + waarde(0,3,diff) + " kWh</td></tr>" +
 								"</table>";
 						if (pse+psv+pve+pvs > 0) {
 							// update current day info in graphs
