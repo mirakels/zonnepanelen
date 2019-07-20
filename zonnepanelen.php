@@ -2137,13 +2137,12 @@ EOF
 					formatter: function () {
 						var s = '<b>' + Highcharts.dateFormat('%A %d-%m-%Y %H:%M:%S', this.x) + '</b>';
 						$.each(this.points, function () {
+							s += '<br/>' + this.series.name + ': ' + this.y;
 							if (this.series.name == 'Energie') {
-								s += '<br/>' + this.series.name + ': ' +
-								this.y + ' kWh';
+								s += ' kWh';
 							}
 							if (this.series.name == 'Vermogen') {
-								s += '<br/>' + this.series.name + ': ' +
-								this.y + ' W';
+								s += ' W';
 							}
 						});
 						return s;
