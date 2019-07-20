@@ -2375,6 +2375,9 @@ EOF
 			},
 			tooltip: {
 				useHTML: true,
+				positioner: function () {
+					return { x: 50, y: 25 };
+				},
 				formatter: function() {
 					var s = '<b><u>';
 					sRE = 0;
