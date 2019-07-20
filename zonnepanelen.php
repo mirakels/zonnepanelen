@@ -2131,6 +2131,9 @@ EOF
 				},
 				credits: { enabled: false },
 				tooltip: {
+					positioner: function () {
+						return { x: 70, y: 70 };
+					},
 					formatter: function () {
 						var s = '<b>' + Highcharts.dateFormat('%A %d-%m-%Y %H:%M:%S', this.x) + '</b>';
 						$.each(this.points, function () {
