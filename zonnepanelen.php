@@ -1559,16 +1559,9 @@ EOF
 					return { x: 15, y: 64 };
 				},
 				formatter: function () {
-					var s = '<b>' + Highcharts.dateFormat('%A %d-%m-%Y %H:%M:%S', this.x) + '</b>';
+					var s = '<b>' + Highcharts.dateFormat('%H:%M:%S', this.x) + '</b>';
 					$.each(this.points, function () {
-						if (this.series.name == 'Energie Productie') {
-							s += '<br/>' + this.series.name + ': ' +
-							this.y + ' kWh';
-						}
-						if (this.series.name == 'Stroom Productie') {
-							s += '<br/>' + this.series.name + ': ' +
-							this.y + ' W';
-						}
+						s += '<br/>' + this.series.name + ': ' + this.y + ' W';
 					});
 					return s;
 				},
@@ -1691,16 +1684,9 @@ EOF
 					return { x: 15, y: 64 };
 				},
 				formatter: function () {
-					var s = '<b>' + Highcharts.dateFormat('%A %d-%m-%Y %H:%M:%S', this.x) + '</b>';
+					var s = '<b>' + Highcharts.dateFormat('%H:%M:%S', this.x) + '</b>';
 					$.each(this.points, function () {
-						if (this.series.name == 'Energie Productie') {
-							s += '<br/>' + this.series.name + ': ' +
-							this.y + ' kWh';
-						}
-						if (this.series.name == 'Stroom Productie') {
-							s += '<br/>' + this.series.name + ': ' +
-							this.y + ' W';
-						}
+						s += '<br/>' + this.series.name + ': ' + this.y + ' Wh';
 					});
 					return s;
 				},
