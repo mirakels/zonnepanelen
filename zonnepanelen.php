@@ -2294,15 +2294,19 @@ EOF
 <?php
 if ($P1 == 1){
 echo <<<EOF
-	document.getElementById("box_daygraph").addEventListener("click", function() {(window.innerHeight-event.clientY > 64 ?
-		this.classList.toggle("box_daygraph-is-clicked"): "");
-		wchart.reflow();
-		wchart.reflow();
+	document.getElementById("box_daygraph").addEventListener("click", function() {
+		if (window.innerHeight-event.clientY > 64) {
+			this.classList.toggle("box_daygraph-is-clicked")
+			wchart.reflow();
+			wchart.reflow();
+		}
 	});
-	document.getElementById("box_monthgraph").addEventListener("click", function() {(window.innerHeight-event.clientY > 64 ?
-		this.classList.toggle("box_monthgraph-is-clicked"): "" );
-		ychart.reflow();
-		ychart.reflow();
+	document.getElementById("box_monthgraph").addEventListener("click", function() {
+		if (window.innerHeight-event.clientY > 64) {
+			this.classList.toggle("box_monthgraph-is-clicked");
+			ychart.reflow();
+			ychart.reflow();
+		}
 	});
 	window.addEventListener('resize', function(){
 		paneel_charte.reflow();
