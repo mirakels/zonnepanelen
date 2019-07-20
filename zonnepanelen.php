@@ -1493,7 +1493,7 @@ EOF
 			subtitle: {
 				text: "",
 				align: 'left',
-				x: 90,
+				x: 20,
 				y: 20,
 				style: {
 					font: 'Arial',
@@ -1621,7 +1621,7 @@ EOF
 			subtitle: {
 				text: "",
 				align: 'left',
-				x: 90,
+				x: 20,
 				y: 20,
 				style: {
 					font: 'Arial',
