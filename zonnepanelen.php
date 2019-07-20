@@ -1491,7 +1491,7 @@ EOF
 			},
 			title: { text: null },
 			subtitle: {
-				text: "",
+				text: '',
 				align: 'left',
 				x: 20,
 				y: 20,
@@ -1523,7 +1523,8 @@ EOF
 					return positions;
 				}
 			}, {
-				title: { text: 'Energie (Wh)' },
+				title: { text: '' },
+				labels: { enabled: false },
 				tickPositioner: function () {
 					var positions = [],
 					tick = Math.floor(0),
@@ -1619,7 +1620,7 @@ EOF
 			},
 			title: { text: null },
 			subtitle: {
-				text: "",
+				text: '',
 				align: 'left',
 				x: 20,
 				y: 20,
@@ -1631,7 +1632,7 @@ EOF
 			},
 			xAxis: [{ <?php genxAxis(); ?> }],
 			yAxis: [{
-				title: { text: 'Vermogen(W)' },
+				title: { text: 'Energie (Wh)' },
 				showEmpty: false,
 				tickPositioner: function () {
 					var positions = [],
@@ -1651,7 +1652,8 @@ EOF
 					return positions;
 				}
 			}, {
-				title: { text: 'Energie (Wh)' },
+				title: { text: '' },
+				labels: { enabled: false },
 				tickPositioner: function () {
 					var positions = [],
 					tick = Math.floor(0),
