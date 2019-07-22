@@ -536,7 +536,7 @@ switch ($methode){
 
 		if($val == FALSE)
 		{
-			// creëer tabel P1_Meter_Overzicht 
+			// creëer tabel P1_Meter_Overzicht
 			$sql = "CREATE TABLE P1_Meter_Overzicht (
 				  datum date NOT NULL COMMENT 'Datum',
 				  prod float DEFAULT NULL COMMENT 'Solar productie',
@@ -667,7 +667,7 @@ switch ($methode){
 				array_push($total, $diff);
 			}
 		}
- 
+
 		break;
 }
 
