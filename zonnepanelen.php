@@ -1317,7 +1317,7 @@ EOF
 									var sep = rpan[i] == 0 ? "<P>" : "&nbsp;";
 									document.getElementById("text_paneel_W_"+i).innerHTML = waarde(0,0,data[iy]["O"+i]) + " Wh<br>"
 											+ waarde(0,0,data[iy]["E"+i])  + "W" + sep + "M=" +
-											+ waarde(0,0,data[iy]["VM"+i]) + "W";
+											+ waarde(0,0,data[iy]["VM"+i]) + "W" + sep + data[iy]["VMT"+i].substring(0,5);
 								} else {
 									document.getElementById("text_paneel_W_"+i).innerHTML = waarde(0,0,data[iy]["O"+i]) + "<br>Wh";
 								}
