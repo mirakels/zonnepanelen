@@ -432,10 +432,8 @@ EOF
 		echo '				<div class="box_Zonnepaneel_'.$i.'" id="box_Zonnepaneel_'.$i.'">'."\n";
 		echo '					<div class="text_paneel_W" id="text_paneel_W_'.$i.'"></div>'."\n";
 		echo '					<div class="text_Zonnepaneel_n" id="text_Zonnepaneel_'.$i.'">'.$op_id[$i][1].'</div>'."\n";
-		echo '					<img id="image_'.$i.'" src="./img/Zonnepaneel-'.($op_id[$i][2] == 0 ? 'ver.gif':'hor.gif').'" alt="" width="100%" height="100%" style="width: 100%; height: 100%; position:relative; z-index: 5;"/>'."\n";
-		echo '				</div>'."\n";
-		echo '				<div class="box_Zonnepaneel_'.$i.'">'."\n";
-		echo '					<img src="./img/dummy.gif" alt="" width="100%" Height="100%" style="width: 100%; height: 100%; position: relative; z-index: 15;" usemap="#'.$i.'">'."\n";
+		echo '					<img id="image_'.$i.'" src="./img/Zonnepaneel-'.($op_id[$i][2] == 0 ? 'ver.gif':'hor.gif').'" alt="" style="top: 0; left: 0; width: 100%; height: 100%; position:absolute; z-index: 5;"/>'."\n";
+		echo '					<img src="./img/dummy.gif" alt="" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; z-index: 15;" usemap="#'.$i.'"/>'."\n";
 		echo '					<map name="'.$i.'">'."\n";
 		echo '						<area id="tool_paneel_'.$i.'" data-ttitle="Paneel '.$op_id[$i][1].'" shape="rect" coords="0,0,252,252" title="">'."\n";
 		echo '					</map>'."\n";
