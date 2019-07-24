@@ -1315,9 +1315,9 @@ EOF
 							for (var i=1; i<=aantal; i++){
 								if (vermogen == 1){
 									var sep = rpan[i] == 0 ? "<P>" : "&nbsp;";
-									var t = (data[iy]["IVACT"] != 0) ? "E" : "VM";
 									document.getElementById("text_paneel_W_"+i).innerHTML = waarde(0,0,data[iy]["O"+i]) + " Wh<br>"
-											+ waarde(0,0,data[iy][t+i]) + " W";
+											+ waarde(0,0,data[iy]["E"+i])  + "W" + sep + "M=" +
+											+ waarde(0,0,data[iy]["VM"+i]) + "W";
 								} else {
 									document.getElementById("text_paneel_W_"+i).innerHTML = waarde(0,0,data[iy]["O"+i]) + "<br>Wh";
 								}
