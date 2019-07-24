@@ -611,7 +611,7 @@ Just rename zonnepanelen-local-example.css to zonnepanelen-local.css and fill in
 
 div.text_Zonnepaneel_n {
 	z-index: 10;
-	top: 65%;
+	top: 75%;
 	width: 100%;
 	position: absolute;
 	text-align: center;
@@ -620,13 +620,6 @@ div.text_Zonnepaneel_n {
 div.text_paneel_W {
 	z-index: 10;
 	top: 7%;
-	width: 100%;
-	position: absolute;
-	color: white;
-}
-div.text_paneel_WX {
-	z-index: 10;
-	top: 36%;
 	width: 100%;
 	position: absolute;
 	color: white;

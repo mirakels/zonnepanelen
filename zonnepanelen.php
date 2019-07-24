@@ -431,7 +431,6 @@ EOF
 	for ($i=1; $i<=$aantal; $i++){
 		echo '				<div class="box_Zonnepaneel_'.$i.'" id="box_Zonnepaneel_'.$i.'">'."\n";
 		echo '					<div class="text_paneel_W" id="text_paneel_W_'.$i.'"></div>'."\n";
-		echo '					<div class="text_paneel_WX" id="text_paneel_W_'.$i.'a"></div>'."\n";
 		echo '					<div class="text_Zonnepaneel_n" id="text_Zonnepaneel_'.$i.'">'.$op_id[$i][1].'</div>'."\n";
 		echo '					<img id="image_'.$i.'" src="./img/Zonnepaneel-'.($op_id[$i][2] == 0 ? 'ver.gif':'hor.gif').'" alt="" width="100%" height="100%" style="width: 100%; height: 100%; position:relative; z-index: 5;"/>'."\n";
 		echo '				</div>'."\n";
@@ -1315,12 +1314,12 @@ EOF
 
 							for (var i=1; i<=aantal; i++){
 								if (vermogen == 1){
-									document.getElementById("text_paneel_W_"+i).innerHTML = waarde(0,0,data[iy]["O"+i])+ " Wh";
+									var sep = rpan[i] == 0 ? "<P>" : "&nbsp;";
 									var t = (data[iy]["IVACT"] != 0) ? "E" : "VM";
-									document.getElementById("text_paneel_W_"+i+"a").innerHTML = waarde(0,0,data[iy][t+i]) + " W";
+									document.getElementById("text_paneel_W_"+i).innerHTML = waarde(0,0,data[iy]["O"+i]) + " Wh<br>"
+											+ waarde(0,0,data[iy][t+i]) + " W";
 								} else {
-									document.getElementById("text_paneel_W_"+i).innerHTML = waarde(0,0,data[iy]["O"+i]);
-									document.getElementById("text_paneel_W_"+i+"a").innerHTML = "Wh";
+									document.getElementById("text_paneel_W_"+i).innerHTML = waarde(0,0,data[iy]["O"+i]) + "<br>Wh";
 								}
 								document.getElementById("tool_paneel_"+i).setAttribute("data-tcontent",
 										"<table class=qtiptable>" +
